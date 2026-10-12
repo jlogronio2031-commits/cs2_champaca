@@ -1,0 +1,47 @@
+Score Bonus Calculator (Modular Program)
+
+Description
+This program applies a flat bonus of 5 points to a student's raw exam score. It utilizes a modular design to calculate the final grade while ensuring that the total adjusted score never exceeds a maximum ceiling of 100 points.
+
+How to Run
+1. Save the code into a file named `score_calculator.py`.
+2. Open your terminal or IDE (VS Code, Replit, IDLE).
+3. Execute the script by running: `python score_calculator.py`
+4. Enter your raw exam score when prompted.
+
+```python
+# WELCOME TO THE MODULAR CALCULATOR
+
+# Ask the user for their raw score
+raw_score = float(input("Enter your score: "))
+
+
+# Function that processes the score and returns the value
+def add_bonus(score):
+    bonus = 5
+    total_score = min(score + bonus, 100)  # max score at 100
+    return int(total_score)  # Returns the value to the caller
+
+
+# Call the function, store the returned value in a variable, and display it
+final_score = add_bonus(raw_score)
+print(f"Final Score with bonus: {final_score}")
+```
+
+Sample Input/Output Execution
+
+Case 1: Standard Score
+```text
+Enter your score: 82
+Final Score with bonus: 87
+```
+
+Case 2: Maximum Ceiling Cap
+```text
+Enter your score: 98
+Final Score with bonus: 100
+```
+
+Author
+Name: Jhillian Chloe Logronio
+Section: Champaca
