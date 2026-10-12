@@ -1,0 +1,16 @@
+# WELCOME TO THE MODULAR CALCULATOR
+
+# Ask the user for their raw score
+raw_score = float(input("Enter your score: "))
+
+
+# score proccess and return value
+def add_bonus(score):
+    bonus = 5
+    total_score = min(score + bonus, 100)  # max score: 100
+    return int(total_score)
+
+
+# call function and display
+final_score = add_bonus(raw_score)
+print(f"Final Score with bonus: {final_score}")
